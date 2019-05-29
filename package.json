@@ -1,12 +1,20 @@
 {
-  "name": "electron-quick-start",
+  "name": "timekeeping",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "build": {
+    "appId": "novalex.ai",
+    "mac": {
+      "category": "novalex.ai.timekeeping"
+    }
+  },
+  "repository": "https://github.com/agiletechvn/electron-starterkit.git",
   "keywords": [
     "Electron",
     "quick",
@@ -17,6 +25,10 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^5.0.2"
+    "electron": "^5.0.2",
+    "electron-builder": "^20.41.0"
+  },
+  "dependencies": {
+    "electron-reload": "^1.4.0"
   }
 }
